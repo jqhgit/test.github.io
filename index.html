@@ -5,9 +5,9 @@
     debugger
   function onloadfunc(){
     debugger
-    document.getElementsByClassName("markdown-body")[0].children[0].remove()
+    document.getElementById("myiframe").getElementsByClassName("markdown-body")[0].children[0].remove()
   }  
 </script>
-<iframe onload="onloadfunc()" src="test" style="height:700px;width:100%">
+<iframe id="myiframe" onload="onloadfunc()" src="test" style="height:700px;width:100%">
   </iframe>
 
