@@ -2,10 +2,22 @@
 <a href="./test">点我</a>
 
 <script type="text/javascript">
-    debugger
+    function loop(){
+        setTimeOut(function(){
+            var ele = document.getElementById("myiframe").getElementsByClassName("markdown-body")[0];
+            if(ele){
+                ele.children[0].remove()
+            }
+            else{
+                loop()
+            }
+        },500)
+    
+    }
+    
+    
   function onloadfunc(){
-    debugger
-    document.getElementById("myiframe").getElementsByClassName("markdown-body")[0].children[0].remove()
+      loop()
   }  
 </script>
 <iframe id="myiframe" onload="onloadfunc()" src="test" style="height:700px;width:100%">
