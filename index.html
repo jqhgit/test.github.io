@@ -4,7 +4,7 @@
 <script type="text/javascript">
     function loop(){
         setTimeout(function(){
-            var ele = document.getElementById("myiframe").getElementsByClassName("markdown-body")[0];
+            var ele = document.getElementById("myiframe").contentDocument.getElementsByClassName("markdown-body")[0];
             if(ele){
                 ele.children[0].remove()
             }
